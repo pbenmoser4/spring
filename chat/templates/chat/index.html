@@ -1,0 +1,20 @@
+{% if user_list %}
+	<ul>
+	{% for user in user_list %}
+		<li>{{ user.alias }}</li>
+	{% endfor %}
+	</ul>
+{% else %}
+	<p>No polls are avaliable.</p>
+{% endif %}
+
+{% if ret_list %}
+	<ul>
+	{% for item in ret_list %}
+		<a href='{{ item.title_link }}'>{{ item.title }}</a><br/>
+		{{ item.description }}<br/>
+	{% endfor %}
+	</ul>
+{% else %}
+
+{% endif %}

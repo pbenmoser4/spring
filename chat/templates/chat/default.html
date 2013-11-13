@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	{% load staticfiles %}
+	<link rel="stylesheet" type="text/css" href="{% static "chat/base.css" %}" />
+	{% block extrastyles %}
+	{% endblock %}
+	<title>{% block title %}Spring{% endblock %}</title>
+</head>
+
+<body style='margin:0px;'>
+
+<div id="all" class="wrap">
+	<div id="masthead-all" class="wrap">
+		
+	</div>
+	
+	{% block body %}
+	{% endblock %}
+
+</div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+{% block morescripts %}
+{% endblock %}
+</body>
+</html>

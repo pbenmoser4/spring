@@ -1,0 +1,15 @@
+{% extends "chat/default.html" %}
+
+{% block extrastyles %}
+	{% load staticfiles %}
+	<script src="{% static "chat/functions.js"  %}"></script>
+	<link rel="stylesheet" type="text/css" href="{% static "chat/chat.css" %}" />
+{% endblock %}
+
+{% block body %}
+	{% csrf_token %}
+	<div id="return" function-url="{% url 'query'  %}">
+		
+	</div>
+	<button id='submit-button' onclick='sendQuery()'>Send</button>
+{% endblock %}
